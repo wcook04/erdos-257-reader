@@ -1,0 +1,25 @@
+# Which sums of 1/(2ⁿ − 1) are irrational?
+
+> Erdős problem #257 asks whether the sum of 1/(2^a - 1) over every infinite set A of positive integers is irrational. It is open. This site holds three papers that prove irrationality under sufficient conditions on A, beside the Lean proofs of their statements and a graph of the argument.
+
+The site holds 690 records joined by what uses what: 185 results printed in the papers, 35 proof steps an AI agent wrote out from the papers, 5 cited results, 7 open questions and 458 Lean declarations. Each paper states a narrower part of them.
+The papers have 210 marked statements joined to the records by 210 ties: 186 copied from the papers' published evidence mapping and 24 made by an AI agent for this site. No independent mathematician has reviewed the ties, and no program tests whether the two sides say the same thing.
+
+## Read
+
+- [Exposition](https://wcook04.github.io/erdos-257-reader/pdf/exposition.pdf)
+- [Short paper](https://wcook04.github.io/erdos-257-reader/pdf/short-paper.pdf)
+- [Long record](https://wcook04.github.io/erdos-257-reader/pdf/long-record.pdf)
+
+## Data
+
+All data is static JSON under https://wcook04.github.io/erdos-257-reader/edition/. Start at edition/index.json: it maps API routes to files.
+
+- The route "/alignment": for each record, its Lean declarations with relation, comparison (`fidelity`) and exact `lines`, and exact statement slices in each paper with who linked them (`origin`)
+- The routes "/ties/short", "/ties/long" and "/ties/expository": each paper's marked statements and their ties (210 marked statements, 188 with Lean, in 210 ties)
+- The routes "/lean/modules", "/lean/names" and "/lean/module": the Lean index (239 modules, 6,010 declarations)
+- verification/: the receipts of the runs listed on the What ran page
+
+## Source
+
+- [Repository](https://github.com/wcook04/lean-exposition): papers, records, tools and this website
