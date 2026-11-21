@@ -16,7 +16,7 @@ Erdős asked whether \sum_{a\in A}1/(2^a-1) is irrational for every infinite set
 | [Argument map](https://wcook04.github.io/erdos-257-reader/map/) · [Compare](https://wcook04.github.io/erdos-257-reader/compare/) | The recorded steps of the argument and their statements in each paper |
 | [Lean index](https://wcook04.github.io/erdos-257-reader/lean/) · [What ran](https://wcook04.github.io/erdos-257-reader/checks/) | The Lean code and every recorded run, passed or not |
 
-The papers have 210 marked statements, 188 of them with Lean.
+The papers have 1,459 marked statements, 1,455 of them with Lean.
 
 The three papers are also available in [PDF](pdf/).
 
