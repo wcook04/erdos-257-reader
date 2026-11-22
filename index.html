@@ -1,102 +1,52 @@
 <!doctype html>
-<html lang="en" data-view="home">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Which sums of 1/(2ⁿ − 1) are irrational?</title>
-    <meta
-      name="description"
-      content="Erdős asked whether \sum_{a\in A}1/(2^a-1) is irrational for every infinite set A of positive integers. The question is open. The papers here prove that the sum is irrational when A satisfies a weighted summability condition, when A has a summable divisor cover, and when A lies in the union of a set of each kind. Each result holds with any integer b\ge2 in place of 2. The simplest case is the one Erdős stated in 1968: every infinite A with \sum_{a\in A}1/a&lt;\infty."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Which sums of 1/(2ⁿ − 1) are irrational?" />
-    <meta
-      property="og:description"
-      content="Three papers on Erdős problem #257, read beside their Lean proofs and a graph of the argument"
-    />
-    <meta property="og:url" content="https://wcook04.github.io/erdos-257-reader/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="describedby" href="/erdos-257-reader/llms.txt" type="text/plain" />
-    <meta name="author" content="Will Cook" />
-    <meta name="theme-color" content="#f8f0e2" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#1c1526" media="(prefers-color-scheme: dark)" />
-    <link rel="icon" href="/erdos-257-reader/favicon.svg" type="image/svg+xml" />
-    <script>
-      (function () {
-        try {
-          var stored = localStorage.getItem("lx-theme");
-          if (stored === "light" || stored === "dark") document.documentElement.setAttribute("data-theme", stored);
-        } catch (e) {}
-      })();
-    </script>
-    <script type="module" crossorigin src="/erdos-257-reader/assets/index-D3-LOmmM.js"></script>
-    <link rel="modulepreload" crossorigin href="/erdos-257-reader/assets/react-DHsaPJjs.js">
-    <link rel="modulepreload" crossorigin href="/erdos-257-reader/assets/router-Di_tCnMu.js">
-    <link rel="modulepreload" crossorigin href="/erdos-257-reader/assets/site-BTGELgxQ.js">
-    <link rel="stylesheet" crossorigin href="/erdos-257-reader/assets/index-F4aVdOPd.css">
-  <link rel="preload" href="/erdos-257-reader/assets/source-sans-3-latin-wght-normal-Bo_j9asI.woff2" as="font" type="font/woff2" crossorigin /><link rel="preload" href="/erdos-257-reader/assets/stix-two-text-latin-400-normal-Dm29J5Fl.woff2" as="font" type="font/woff2" crossorigin /><link rel="preload" href="/erdos-257-reader/assets/stix-two-text-latin-500-normal-QKEzPprE.woff2" as="font" type="font/woff2" crossorigin /><link rel="preload" href="/erdos-257-reader/edition/index.json" as="fetch" crossorigin /></head>
-  <body>
-    <div id="root"><!--first-screen--><div class="app"><header class="topbar"><span class="fam-lockup"><a class="fam-lockup__home" href="https://wcook04.github.io/" rel="author" title="All of Will Cook's websites and videos"><img src="/erdos-257-reader/plectis.svg" alt="" width="26" height="26" /><span class="fam-lockup__owner" translate="no">Will Cook</span></a><span class="fam-lockup__rule" aria-hidden="true"></span><a class="fam-lockup__site" href="/erdos-257-reader/" aria-label="Erdős 257 Reader, front page"><svg viewBox="0 0 32 32" aria-hidden="true" class="wordmark__mark"><path d="M4 27 L4 5 M4 27 L28 27" fill="none" stroke-width="2" stroke-linecap="round"></path><path d="M5 26 C10 22 13 17 16 14 C19 11 22 9 27 6" fill="none" stroke-width="2.6" stroke-linecap="round"></path><circle cx="16" cy="14" r="3"></circle></svg><span class="fam-lockup__name" translate="no">Erdős 257 Reader</span></a></span><nav class="topnav" aria-label="Main"><a class="topnav__job" href="/erdos-257-reader/read/short">Read</a><a class="topnav__job" href="/erdos-257-reader/map">Map</a><a class="topnav__job" href="/erdos-257-reader/compare">Compare</a><a class="topnav__job" href="/erdos-257-reader/checks">What ran</a><a class="topnav__job topnav__job--quiet" href="/erdos-257-reader/lean">Lean index</a></nav></header><main id="main" class="app__main"><div class="front"><section class="front__hero front__hero--single" aria-labelledby="front-title">
-<div class="front__intro">
-<p class="front__what">Three papers on Erdős problem #257, read beside their Lean proofs and a graph of the argument</p>
-<h1 id="front-title" class="front__title">Which sums of 1/(2ⁿ − 1) are irrational?</h1>
-<p class="front__lede">Erdős asked whether <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:1.0771em;vertical-align:-0.3271em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1786em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="mrel mtight">∈</span><span class="mord mathnormal mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3271em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1/</span><span class="mopen">(</span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span> is irrational for every infinite set <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> of positive integers. The question is open. The papers here prove that the sum is irrational when <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> satisfies a weighted summability condition, when <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> has a summable divisor cover, and when <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> lies in the union of a set of each kind. Each result holds with any integer <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.8304em;vertical-align:-0.136em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span> in place of <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span>. The simplest case is the one Erdős stated in 1968: every infinite <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> with <span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:1.0771em;vertical-align:-0.3271em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1786em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="mrel mtight">∈</span><span class="mord mathnormal mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3271em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1/</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord">∞</span></span></span></span>.</p>
-<p class="front__actions"><a class="front__primary" href="/erdos-257-reader/read/short">Read the short paper</a><a class="front__secondary" href="/erdos-257-reader/read/expository">Read the exposition</a></p>
-<p class="front__made">Made by Will Cook using AI. He built and directed the research; AI agents did most of the research, the drafting and the Lean, and no independent mathematician has reviewed the papers. Erdős proved the case of all positive integers in 1948, and in 1968 the case of pairwise coprime sets with finite reciprocal sum, remarking without details that coprimality could be removed. Duverney and Tachiya proved the squarefree case, and Tao and Teräväinen the case of the primes. Lean is a programming language whose compiler rejects a proof with a wrong step. <a href="/erdos-257-reader/about">About this site</a></p>
-</div>
-<div class="front__watch" id="videos" role="group" aria-label="Videos">
-<figure class="film-slot front__lead">
-<a class="film-slot__frame" href="https://www.youtube.com/watch?v=MrC-pboGZ2k" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><img src="/erdos-257-reader/films/short-mathematics-640.webp" srcset="/erdos-257-reader/films/short-mathematics-640.webp 640w, /erdos-257-reader/films/short-mathematics-1280.webp 1280w" sizes="(max-width: 37.5em) 100vw, 300px" alt="" width="1280" height="720" decoding="async" fetchpriority="high" /><span class="film-slot__play"></span><span class="film-slot__time">1:41</span></a>
-<figcaption class="film-slot__caption"><p class="front__kicker">Erdős’s 1968 case in brief</p><p class="film-slot__title"><a href="https://www.youtube.com/watch?v=MrC-pboGZ2k" target="_blank" rel="noopener noreferrer">Erdős #257: AI proved one case of an infinite-sum problem, checked in Lean<span class="sr-only">, video on YouTube, 1 minute 41 seconds</span></a></p></figcaption>
-</figure>
-<div class="front__others">
-<figure class="film-slot film-slot--small front__minor">
-<a class="film-slot__frame" href="https://www.youtube.com/watch?v=VUSHyYSf1Ak" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><img src="/erdos-257-reader/films/mathematics-v3-640.webp" srcset="/erdos-257-reader/films/mathematics-v3-640.webp 640w, /erdos-257-reader/films/mathematics-v3-1280.webp 1280w" sizes="160px" alt="" width="1280" height="720" decoding="async" loading="lazy" /><span class="film-slot__play"></span><span class="film-slot__time">30:08</span></a>
-<figcaption class="film-slot__caption"><p class="front__kicker">Erdős’s 1968 case, proved from fractions</p><p class="film-slot__title"><a href="https://www.youtube.com/watch?v=VUSHyYSf1Ak" target="_blank" rel="noopener noreferrer">Erdős #257: A proof that some sums of 1/(2ⁿ−1) cannot be fractions<span class="sr-only">, video on YouTube, 30 minutes 8 seconds</span></a></p></figcaption>
-</figure>
-<figure class="film-slot film-slot--small front__minor">
-<a class="film-slot__frame" href="https://www.youtube.com/watch?v=QIMDizV8u_I" target="_blank" rel="noopener noreferrer" aria-hidden="true" tabindex="-1"><img src="/erdos-257-reader/films/short-funnel-640.webp" srcset="/erdos-257-reader/films/short-funnel-640.webp 640w, /erdos-257-reader/films/short-funnel-1280.webp 1280w" sizes="160px" alt="" width="1280" height="720" decoding="async" loading="lazy" /><span class="film-slot__play"></span><span class="film-slot__time">2:12</span></a>
-<figcaption class="film-slot__caption"><p class="front__kicker">How the three papers are made</p><p class="film-slot__title"><a href="https://www.youtube.com/watch?v=QIMDizV8u_I" target="_blank" rel="noopener noreferrer">How I use AI to turn a Lean proof into three papers and a video<span class="sr-only">, video on YouTube, 2 minutes 12 seconds</span></a></p></figcaption>
-</figure>
-</div>
-</div>
-</section><!--hero-break-->
-<section class="front__theorem front__theorem--verdicts" aria-labelledby="front-clauses">
-<div class="front__theorem-words">
-<h2 id="front-clauses" class="front__clauses-title">Theorem A.1, clause by clause</h2>
-<p class="front__site">Theorem A.1 of the short paper is the statement Erdős gave in 1968. Its Lean statement is irrational_erdosSupportSeries_of_summable_reciprocal, which also allows the set to contain 0. The exposition proves the theorem at base two only, so the Lean statement says more than the exposition's Theorem 1 in the base as well. An AI agent compared the clauses, and no independent mathematician has reviewed the comparison.</p>
-<p class="front__guide-link"><a href="/erdos-257-reader/read/short?l=b44976-45165&n=short.res-reciprocal-support#sec-reciprocal-support">The main theorem with its Lean open</a></p>
-<p class="front__limit">The three papers have 1,459 marked statements, 1,455 of them with Lean, joined to the records by 1,459 ties: 0 copied from the papers’ published evidence mapping and 1,459 made by an AI agent for this site. No independent mathematician has reviewed the ties, and no program tests whether the two sides say the same thing.</p>
-</div>
-<figure class="rosetta">
-<table class="rosetta__table">
-<caption class="visually-hidden">The main theorem, clause by clause: the Lean statement beside the short paper's statement, with what the Lean says against it.</caption>
-<thead><tr><th scope="col">In the Lean</th><th scope="col">In the short paper</th><th scope="col">The Lean</th></tr></thead>
-<tbody>
-<tr class="rosetta__row">
-<td class="rosetta__lean"><code translate="no">(b <span class="lean-t lean-t--op">:</span> ℕ) (<span class="lean-t lean-t--type">A</span> <span class="lean-t lean-t--op">:</span> <span class="lean-t lean-t--type">Set</span> ℕ) (<span class="lean-t lean-t--name">hb</span> <span class="lean-t lean-t--op">:</span> 2 ≤ b) (<span class="lean-t lean-t--name">hA</span> <span class="lean-t lean-t--op">:</span> <span class="lean-t lean-t--type">A</span>.<span class="lean-t lean-t--type">Infinite</span>)</code></td>
-<td class="rosetta__math"><a class="rosetta__formula" href="/erdos-257-reader/compare?n=short.res-reciprocal-support" aria-label="Compare this clause across the levels"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">every integer </span></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊆</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.8718em;vertical-align:-0.1774em;"></span><span class="mord"><span class="mord mathbb">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mrel mtight">&gt;</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1774em;"><span></span></span></span></span></span></span><span class="mspace"> </span><span class="mord text"><span class="mord">infinite</span></span></span></span></span></a><span class="rosetta__words">The base and the set. The Lean allows A to contain 0, which the paper excludes. Lean's division by 0 gives 0, so the exponent 0 adds 0 to both sums, and on sets of positive integers the two statements agree. The exposition's Theorem 1 fixes b = 2.</span></td>
-<td class="rosetta__verdict" data-verdict="stronger">Says more than the paper</td>
-</tr>
-<tr class="rosetta__row">
-<td class="rosetta__lean"><code translate="no">(<span class="lean-t lean-t--name">hsum</span> <span class="lean-t lean-t--op">:</span> <span class="lean-t lean-t--type">Summable</span> (<span class="lean-t lean-t--name">reciprocalSupportTerm</span> <span class="lean-t lean-t--type">A</span>))</code></td>
-<td class="rosetta__math"><a class="rosetta__formula" href="/erdos-257-reader/compare?n=short.res-reciprocal-support" aria-label="Compare this clause across the levels"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1786em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="mrel mtight">∈</span><span class="mord mathnormal mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3271em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord">∞</span></span></span></span></a><span class="rosetta__words">reciprocalSupportTerm A takes the value 1/a at a in A and 0 elsewhere.</span></td>
-<td class="rosetta__verdict" data-verdict="same">Says the same as the paper</td>
-</tr>
-<tr class="rosetta__row">
-<td class="rosetta__lean"><code translate="no"><span class="lean-t lean-t--type">Irrational</span> (<span class="lean-t lean-t--name">erdosSupportSeries</span> b <span class="lean-t lean-t--type">A</span>)</code></td>
-<td class="rosetta__math"><a class="rosetta__formula" href="/erdos-257-reader/compare?n=short.res-reciprocal-support" aria-label="Compare this clause across the levels"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0785em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:1.2484em;vertical-align:-0.4033em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1786em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="mrel mtight">∈</span><span class="mord mathnormal mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3271em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5935em;"><span style="top:-2.786em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="katex-sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4033em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"> </span><span class="mord text"><span class="mord">is irrational</span></span></span></span></span></a><span class="rosetta__words">erdosSupportSeries b A is the sum over all natural numbers a of 1/(b^a − 1) for a in A and 0 elsewhere.</span></td>
-<td class="rosetta__verdict" data-verdict="same">Says the same as the paper</td>
-</tr>
-</tbody>
-</table>
-<figcaption class="rosetta__foot"><a href="/erdos-257-reader/compare?n=short.res-reciprocal-support">Compare the whole theorem, its proof and its definitions</a></figcaption>
-</figure>
-</section></div></main></div><!--/first-screen--></div>
-    <noscript>
-      <p style="max-width: 40rem; margin: 4rem auto; font-family: Georgia, serif; line-height: 1.6">
-        The papers, the Lean beside them, the argument map and the comparisons on this site are drawn in the browser and need JavaScript. The papers are also available as Markdown and PDF in the repository under <code>papers/erdos257/</code>.
-      </p>
-    </noscript>
-  </body>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Erdős 257 Reader has moved to the library</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://wcook04.github.io/library/erdos-257/">
+<script>
+function libraryAddress(T, path, search, hash) {
+  var p = path.indexOf(T.old_base) === 0 ? path.slice(T.old_base.length) : path.replace(/^\/+/, "");
+  p = p.replace(/index\.html$/, "").replace(/\/+$/, "");
+  var q = new URLSearchParams(search);
+  var map = ["g", "n", "t", "lens", "e"].some(function (k) { return q.has(k); });
+  if (p === "") {
+    // The old front page: with map parameters it was the map; its own sections moved to About.
+    if (map) return T.new + "map/" + search + hash;
+    if (hash && hash.length > 1) return T.new + "about/" + search;
+    return T.new + search;
+  }
+  var read = p.match(/^read\/(long|short|expository)$/);
+  if (read) {
+    // A passage opened beside another keeps the reader's own route, which the library serves too.
+    if (q.has("beside")) return T.new + "read/" + read[1] + "/" + search + hash;
+    return T.new + T.pages[read[1]] + search + hash;
+  }
+  if (T.views.indexOf(p) >= 0) return T.new + p + "/" + search + hash;
+  // Any other address keeps its path under the library paper: a file keeps its name, a route its slash.
+  return T.new + p + (/\.[A-Za-z0-9]+$/.test(p) ? "" : "/") + search + hash;
+}
+(function () {
+  var T = {"old_base": "/erdos-257-reader/", "new": "https://wcook04.github.io/library/erdos-257/", "pages": {"short": "", "long": "record/", "expository": "exposition/"}, "views": ["map", "compare", "lean", "checks", "about", "search"]};
+  location.replace(libraryAddress(T, location.pathname, location.search, location.hash));
+})();
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=https://wcook04.github.io/library/erdos-257/"></noscript>
+<meta http-equiv="refresh" content="1; url=https://wcook04.github.io/library/erdos-257/">
+<style>
+:root { color-scheme: light dark; --ink: #1d1d1b; --page: #fbfaf7; --link: #1f4f8f; }
+@media (prefers-color-scheme: dark) { :root { --ink: #e9e6df; --page: #161614; --link: #8db4ec; } }
+body { margin: 0; padding: 48px 16px; background: var(--page); color: var(--ink); font: 18px/1.5 Georgia, "Times New Roman", serif; }
+main { max-width: 34em; margin: 0 auto; }
+a { color: var(--link); overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<main>
+<p>Erdős 257 Reader is now read in Will Cook's library.</p>
+<p><a href="https://wcook04.github.io/library/erdos-257/">https://wcook04.github.io/library/erdos-257/</a></p>
+</main>
+</body>
 </html>
